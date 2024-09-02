@@ -2,12 +2,14 @@
 
 ## Overview
 
-This task involves implementing an HTTP API server for managing `Customer` entities. The server should support basic CRUD operations and be developed using Spring Boot. No frontend is required, and authentication is not necessary.
+This task involves implementing an HTTP API server for managing `Customer` entities. The server should support basic CRUD operations and be developed using Spring Boot.
 
 ## Requirements
 
 - **Backend Framework**: Spring Boot
 - **Database**: Any relational SQL database (MySQL, PostgreSQL, etc.)
+- **Authentication**: Not required
+- **Frontend**: Not required
 - **Authentication**: Not required
 
 ## Endpoints
