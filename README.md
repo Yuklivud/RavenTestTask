@@ -1,4 +1,3 @@
-```markdown
 # Test Task for Junior Java Developer
 
 ## Overview
