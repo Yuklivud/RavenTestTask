@@ -1,9 +1,23 @@
 package com.spring.rest.customer_rest.dto;
 
+import jakarta.validation.constraints.*;
+
 public class CustomerDTO {
+
     private Long id;
+
+    @NotBlank
+    @NotEmpty
+    @Size(min = 2, max = 50)
     private String fullName;
+
+    @NotBlank
+    @NotEmpty
+    @Email
+    @Size(min = 2, max = 100)
     private String email;
+
+    @Pattern(regexp = "\\+\\d{6,14}", message = "Phone must start with '+' and contain only digits, length 6 to 14")
     private String phone;
 
     public CustomerDTO(Long id, String fullName, String email, String phone) {

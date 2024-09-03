@@ -44,10 +44,11 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public void updateCustomer(int id, Customer customer) {
+    public Customer updateCustomer(int id, Customer customer) {
         Session session = entityManager.unwrap(Session.class);
         customer.setUpdated(System.currentTimeMillis());
         session.update(customer);
+        return customer;
     }
 
     @Override

@@ -9,6 +9,6 @@ public interface CustomerDAO {
     public List<Customer> getAllCustomers();
     public Customer createCustomer(Customer customer);
     public void deleteCustomerById(int id);
-    public void updateCustomer(int id, Customer customer);
+    public Customer updateCustomer(int id, Customer customer);
     public boolean emailExists(String email);
 }

@@ -41,28 +41,33 @@ public class Controller {
         createdCustomer.setEmail(customer.getEmail());
         createdCustomer.setPhone(customer.getPhone());
 
-        customerService.createCustomer(createdCustomer);
+        Customer respResult = customerService.createCustomer(createdCustomer);
 
-        CustomerDTO dto  = new CustomerDTO(customer.getId(), customer.getFullName(), customer.getEmail(), customer.getPhone());
+        CustomerDTO dto  = new CustomerDTO(respResult.getId(), respResult.getFullName(), respResult.getEmail(), respResult.getPhone());
         return ResponseEntity.ok(dto);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<CustomerDTO> updateCustomer(@PathVariable int id, @Valid @RequestBody Customer customer) {
-        Customer existingCustomer = customerService.getCustomerById(id);
-        if (existingCustomer == null) {
-            return ResponseEntity.notFound().build();
-        }
-        if(customer.getFullName() != null && !customer.getFullName().isEmpty()) {
-            existingCustomer.setFullName(customer.getFullName());
-        }
-        if (customer.getPhone() != null && !customer.getPhone().isEmpty()) {
-            existingCustomer.setPhone(customer.getPhone());
-        }
-        customerService.updateCustomer(id, existingCustomer);
+        try {
+            Customer existingCustomer = customerService.getCustomerById(id);
 
-        CustomerDTO dto = new CustomerDTO(customer.getId(), customer.getFullName(), existingCustomer.getEmail(), customer.getPhone());
-        return ResponseEntity.ok(dto);
+            if (existingCustomer == null) {
+                return ResponseEntity.notFound().build();
+            }
+
+            existingCustomer.setId(customer.getId());
+            existingCustomer.setFullName(customer.getFullName());
+            existingCustomer.setPhone(customer.getPhone());
+
+            Customer respResult = customerService.updateCustomer(id, existingCustomer);
+
+            CustomerDTO dto = new CustomerDTO(respResult.getId(), respResult.getFullName(), respResult.getEmail(), respResult.getPhone());
+            return ResponseEntity.ok(dto);
+        }catch (Exception e) {
+            System.out.println(e.getMessage() + " " + e);
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @GetMapping("/{id}")
