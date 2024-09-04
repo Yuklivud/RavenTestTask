@@ -38,10 +38,7 @@ public class CustomerServiceImpl implements CustomerService {
         if(emailExists(customerDTO.getEmail())) {
             throw new EmailAlreadyExistsException("Email already exists " + customerDTO.getEmail());
         }
-        Customer customer = new Customer();
-        customer.setFullName(customerDTO.getFullName());
-        customer.setEmail(customerDTO.getEmail());
-        customer.setPhone(customerDTO.getPhone());
+        Customer customer = customerDTOMapper.dtoToEntity(customerDTO);
 
         return customerDTOMapper.entityToDTO(customerDAO.createCustomer(customer));
     }
@@ -56,8 +53,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Transactional
     public CustomerDTO updateCustomer(int id, CustomerDTO customerDTO) {
         Customer customer = customerDAO.getCustomerById(id);
-        customer.setFullName(customerDTO.getFullName());
-        customer.setPhone(customerDTO.getPhone());
+        Customer customerFromDTO = customerDTOMapper.dtoToEntity(customerDTO);
+
+        customer.setFullName(customerFromDTO.getFullName());
+        customer.setPhone(customerFromDTO.getPhone());
 
         return customerDTOMapper.entityToDTO(customerDAO.updateCustomer(id, customer));
     }
