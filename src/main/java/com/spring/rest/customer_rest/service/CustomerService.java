@@ -1,7 +1,6 @@
 package com.spring.rest.customer_rest.service;
 
 import com.spring.rest.customer_rest.dto.CustomerDTO;
-import com.spring.rest.customer_rest.entity.Customer;
 
 import java.util.List;
 

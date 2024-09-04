@@ -1,7 +1,5 @@
 package com.spring.rest.customer_rest.dto;
 
-import jakarta.validation.constraints.*;
-
 public class CustomerDTO {
     private Long id;
     private String fullName;

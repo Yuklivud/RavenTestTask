@@ -6,13 +6,9 @@ import com.spring.rest.customer_rest.entity.Customer;
 import com.spring.rest.customer_rest.exceptions.EmailAlreadyExistsException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {

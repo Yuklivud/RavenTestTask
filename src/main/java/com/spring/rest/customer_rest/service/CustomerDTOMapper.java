@@ -4,8 +4,6 @@ import com.spring.rest.customer_rest.dto.CustomerDTO;
 import com.spring.rest.customer_rest.entity.Customer;
 import org.springframework.stereotype.Service;
 
-import java.util.function.Function;
-
 @Service
 public class CustomerDTOMapper {
 
