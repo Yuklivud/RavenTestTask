@@ -1,4 +1,4 @@
-package com.spring.rest.customer_rest.service;
+package com.spring.rest.customer_rest.mapper;
 
 import com.spring.rest.customer_rest.dto.CustomerDTO;
 import com.spring.rest.customer_rest.entity.Customer;
