@@ -1,6 +1,6 @@
-package com.spring.rest.customer_rest.dao;
+package raven_task.dao;
 
-import com.spring.rest.customer_rest.entity.Customer;
+import raven_task.entity.Customer;
 
 import java.util.List;
 

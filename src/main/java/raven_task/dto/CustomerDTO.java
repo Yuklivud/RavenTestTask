@@ -1,4 +1,4 @@
-package com.spring.rest.customer_rest.dto;
+package raven_task.dto;
 
 public class CustomerDTO {
     private Long id;

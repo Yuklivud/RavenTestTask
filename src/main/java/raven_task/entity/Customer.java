@@ -1,4 +1,4 @@
-package com.spring.rest.customer_rest.entity;
+package raven_task.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

@@ -1,4 +1,4 @@
-package com.spring.rest.customer_rest.exceptions;
+package raven_task.exceptions;
 
 public class EmailAlreadyExistsException extends RuntimeException {
     public EmailAlreadyExistsException(String message) {

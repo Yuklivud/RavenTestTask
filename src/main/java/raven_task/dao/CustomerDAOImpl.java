@@ -1,6 +1,6 @@
-package com.spring.rest.customer_rest.dao;
+package raven_task.dao;
 
-import com.spring.rest.customer_rest.entity.Customer;
+import raven_task.entity.Customer;
 import jakarta.persistence.EntityManager;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;

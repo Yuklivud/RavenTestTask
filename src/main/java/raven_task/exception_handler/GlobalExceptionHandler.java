@@ -1,6 +1,6 @@
-package com.spring.rest.customer_rest.exception_handler;
+package raven_task.exception_handler;
 
-import com.spring.rest.customer_rest.exceptions.EmailAlreadyExistsException;
+import raven_task.exceptions.EmailAlreadyExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;

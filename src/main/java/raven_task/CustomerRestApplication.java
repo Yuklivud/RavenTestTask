@@ -1,4 +1,4 @@
-package com.spring.rest.customer_rest;
+package raven_task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

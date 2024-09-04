@@ -1,4 +1,4 @@
-package com.spring.rest.customer_rest;
+package raven_task.spring.rest.customer_rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

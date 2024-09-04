@@ -1,10 +1,10 @@
-package com.spring.rest.customer_rest.service;
+package raven_task.service;
 
-import com.spring.rest.customer_rest.dao.CustomerDAO;
-import com.spring.rest.customer_rest.dto.CustomerDTO;
-import com.spring.rest.customer_rest.entity.Customer;
-import com.spring.rest.customer_rest.exceptions.EmailAlreadyExistsException;
-import com.spring.rest.customer_rest.mapper.CustomerDTOMapper;
+import raven_task.dao.CustomerDAO;
+import raven_task.dto.CustomerDTO;
+import raven_task.entity.Customer;
+import raven_task.exceptions.EmailAlreadyExistsException;
+import raven_task.mapper.CustomerDTOMapper;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,9 +43,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional
     public CustomerDTO createCustomer(CustomerDTO customerDTO) {
-        if (emailExists(customerDTO.getEmail())) {
+        if (emailExists(customerDTO.getEmail())){
             throw new EmailAlreadyExistsException("Email already exists " + customerDTO.getEmail());
         }
+
         Customer customer = customerDTOMapper.dtoToEntity(customerDTO);
 
         return customerDTOMapper.entityToDTO(customerDAO.createCustomer(customer));

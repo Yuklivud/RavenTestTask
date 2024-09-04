@@ -1,7 +1,7 @@
-package com.spring.rest.customer_rest.mapper;
+package raven_task.mapper;
 
-import com.spring.rest.customer_rest.dto.CustomerDTO;
-import com.spring.rest.customer_rest.entity.Customer;
+import raven_task.dto.CustomerDTO;
+import raven_task.entity.Customer;
 import org.springframework.stereotype.Service;
 
 @Service

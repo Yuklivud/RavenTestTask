@@ -1,6 +1,6 @@
-package com.spring.rest.customer_rest.service;
+package raven_task.service;
 
-import com.spring.rest.customer_rest.dto.CustomerDTO;
+import raven_task.dto.CustomerDTO;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.spring.rest.customer_rest.controller;
+package raven_task.controller;
 
-import com.spring.rest.customer_rest.dto.CustomerDTO;
-import com.spring.rest.customer_rest.service.CustomerService;
+import raven_task.dto.CustomerDTO;
+import raven_task.service.CustomerService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
