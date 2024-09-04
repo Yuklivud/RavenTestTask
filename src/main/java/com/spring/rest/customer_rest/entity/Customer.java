@@ -18,15 +18,22 @@ public class Customer {
     @Column(name = "updated")
     private Long updated;
 
+    @NotBlank
+    @NotEmpty
+    @Size(min = 2, max = 50)
     @Column(name = "full_name", nullable = false, length = 50)
     private String fullName;
 
+    @NotBlank
+    @NotEmpty
+    @Email
+    @Size(min = 2, max = 100)
     @Column(name = "email", nullable = false, length = 100, unique = true)
     private String email;
 
+    @Pattern(regexp = "\\+\\d{6,14}", message = "Phone must start with '+' and contain only digits, length 6 to 14")
     @Column(name = "phone", nullable = true, length = 14)
     private String phone;
-
 
     @Column(name = "is_active", nullable = false)
     private Boolean isActive = true;
@@ -91,7 +98,7 @@ public class Customer {
         this.phone = phone;
     }
 
-    public Boolean getActive() {
+    public Boolean isActive() {
         return isActive;
     }
 
