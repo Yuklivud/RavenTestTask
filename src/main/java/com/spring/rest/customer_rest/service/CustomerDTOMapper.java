@@ -15,9 +15,6 @@ public class CustomerDTOMapper {
         dto.setEmail(customer.getEmail());
         dto.setPhone(customer.getPhone());
         dto.setFullName(customer.getFullName());
-//        dto.setUpdated(customer.getUpdated());
-//        dto.setCreated(customer.getCreated());
-//        dto.setActive(customer.isActive());
         return dto;
     }
 
@@ -27,9 +24,6 @@ public class CustomerDTOMapper {
         customer.setFullName(customerDTO.getFullName());
         customer.setEmail(customerDTO.getEmail());
         customer.setPhone(customerDTO.getPhone());
-//        customer.setUpdated(customerDTO.getUpdated());
-//        customer.setCreated(customerDTO.getCreated());
-//        customer.setActive(customerDTO.isActive());
         return customer;
     }
 }
