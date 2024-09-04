@@ -1,14 +1,15 @@
 package com.spring.rest.customer_rest.service;
 
+import com.spring.rest.customer_rest.dto.CustomerDTO;
 import com.spring.rest.customer_rest.entity.Customer;
 
 import java.util.List;
 
 public interface CustomerService {
-    public Customer getCustomerById(int id);
-    public List<Customer> getAllCustomers();
-    public Customer createCustomer(Customer customer);
+    public CustomerDTO getCustomerById(int id);
+    public List<CustomerDTO> getAllCustomers();
+    public CustomerDTO createCustomer(CustomerDTO customerDTO);
     public void deleteCustomerById(int id);
-    public Customer updateCustomer(int id, Customer customer);
+    public CustomerDTO updateCustomer(int id, CustomerDTO customerDTO);
     public boolean emailExists(String email);
 }
