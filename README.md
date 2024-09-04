@@ -75,7 +75,6 @@ This task involves implementing an HTTP API server for managing `Customer` entit
 - **Request Body**:
   ```json
   {
-    "id": "Long",
     "fullName": "String (2..50 chars including whitespaces)",
     "email": "String (not editable)",
     "phone": "String (6..14 chars, only digits, should start from +)"
